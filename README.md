@@ -1,6 +1,6 @@
 # Cho Jeongyun Final Integrated Project
 
-The basis of this assignment is to create Portfolio Website.
+The basis of this assignment is to show portfolio pieces on a live website.
 
 ### Prerequisites
 
