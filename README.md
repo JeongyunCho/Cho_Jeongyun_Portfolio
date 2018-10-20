@@ -1,6 +1,6 @@
 # Cho Jeongyun Final Integrated Project
 
-The basis of this assignment is to create 
+The basis of this assignment is to create Portfolio Website.
 
 ### Prerequisites
 
@@ -12,7 +12,7 @@ You will need
 
 ## Getting Started
 
-git clone 
+git clone https://github.com/JeongyunCho/cho_jeongyun_portfolio.git
 
 You're ready to go!
 
@@ -22,20 +22,20 @@ You're ready to go!
 * [Foundation 6](https://foundation.zurb.com/sites.html) - The web framework used - Zurb Foundation 6 for sites
 * [Node.js](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
-
+* ~ add later
 
 
 ## Versioning
 
-We use [Github](http://github.com) for versioning.
+I use [Github](http://github.com) for versioning.
 
 
 
 ## Authors
 
-This project is 
+This project is entirely built by myself.
 
-* **JeongYun Cho (Sam)** - *Developer*
+* **JeongYun Cho (Sam)** - *Developer,Designer*
 
 
 
@@ -43,5 +43,7 @@ This project is
 
 ## Acknowledgments
 
-* images
-* Our brains.
+* images on google
+* pinterest (https://www.pinterest.ca/)
+* awwwards (https://www.awwwards.com/)
+* previous work from graduated students
