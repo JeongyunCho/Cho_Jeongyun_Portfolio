@@ -1,0 +1,26 @@
+{
+  "name": "cho_jeongyun_portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Website of Jeongyun Cho (Sam)",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeongyunCho/cho_jeongyun_portfolio.git"
+  },
+  "author": "Cho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeongyunCho/cho_jeongyun_portfolio/issues"
+  },
+  "homepage": "https://github.com/JeongyunCho/cho_jeongyun_portfolio#readme"
+}
