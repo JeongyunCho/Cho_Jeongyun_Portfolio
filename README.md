@@ -12,7 +12,7 @@ You will need
 
 ## Getting Started
 
-git clone https://github.com/JeongyunCho/cho_jeongyun_portfolio.git
+git clone https://github.com/JeongyunCho/Cho_Jeongyun_Portfolio.git
 
 You're ready to go!
 
