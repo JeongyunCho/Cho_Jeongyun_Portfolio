@@ -1,0 +1,52 @@
+
+.full-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: $full-screen-bg;
+  background-size: $full-screen-bg-size;
+
+  .middle-content-section {
+    text-align: center;
+    color: $full-screen-text-color;
+  }
+   
+  .top-content-section {
+    width: 100%;
+  }
+
+  .bottom-content-section {
+    padding: 1rem;
+
+    svg {
+      height: rem-calc(60);
+      width: rem-calc(60);
+      fill: $full-screen-text-color;
+    }
+  }
+
+  .top-bar {
+    background: transparent;
+
+    .menu {
+      background: transparent;
+    }
+
+    .menu-text {
+      color: $full-screen-text-color;
+    }
+
+    .menu li {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu a {
+      color: $full-screen-text-color;
+      font-weight: bold;
+    }
+  }
+}
+
