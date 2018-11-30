@@ -13,17 +13,19 @@ function addClass() {
 menuBtn.addEventListener("click",addClass,false);
 
 //**** */Doesn't work when text is defined outside.
+
 var waypoint = new Waypoint({
     element: document.querySelector('.middle-content-section'),
     handler: function(direction) {
-        var text = document.querySelector(".text");
-    //   console.log('Scrolled to waypoint!');
+    var text = document.querySelector(".text");
+
       if ( text.classList.contains('hidden') ){
          text.classList.remove('hidden');
       }
       else{
         text.classList.add('hidden');
       }
+    
     //   console.log(text);
     //   console.log(text.classList);
     },

@@ -17,6 +17,7 @@
     .rotate {
       font-family: $head2F;
       font-size: 3em;
+      font-weight: bold;
       height:5rem;
       overflow: hidden;
       @media screen and (min-width: 640px){
@@ -43,8 +44,9 @@
       padding:0;
       height:13rem;
       overflow:hidden;
-      background-image:linear-gradient(#FA2300,#E1037C);
+      background-image:linear-gradient($mainYellow,red);
       background-clip: text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       
     }
@@ -62,19 +64,19 @@
       transition: all 0.5s ease;
     }
     .text.hidden {
-      border-bottom: 1px solid #FA2300;
+      border-bottom: 1px solid $mainYellow;
     }
     
     .text li {
       font-family: $head2F;
       display: inline-block;
-      font-weight: 700;
+      
       font-size: 1.5em;
-      color: black;
+      color: white;
       opacity: 1;
       transition: all 0.5s ease-in-out;
       @media screen and (min-width: 640px){
-        font-size: 2em;
+        font-size: 3em;
       }
       @media screen and (min-width: 1200px){
         font-size: 4em;
@@ -93,7 +95,11 @@
     }
     h1{
      color: white;
-     font-family: $head2F;
+     font-family: $text1F;
+    }
+    button{
+    background-color:$mainYellow;
+    font-family: $head2F;
     }
   } //mid sec ends.
    

@@ -1,7 +1,26 @@
 #mainLogo{
+    position: fixed;
+    left: 1.25rem;
     width:$msize3F;
     @media screen and (min-width: 1200px){
         width: $dsize3F;
+    }
+}
+#name{
+    
+    font-family: $head1F;
+    font-size: $msize3F;
+    text-align: center;
+    cursor: default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+   
+    @media screen and (min-width: 1200px){
+        font-size: 2.5em;
+       //TODO:letterSpacing
     }
 }
 
@@ -12,6 +31,7 @@
   height: 100vh;
   width: 100vw;
   pointer-events: none;
+
     .overlay-menu-wrapper {
         display: flex;
         justify-content: center;
@@ -32,6 +52,7 @@
   .overlay-menu-list {
     li {
       width: 100%;
+      font-family: $head1F;
       font-size: $msize3F;
       min-height: $msize3F;
       font-weight: bold;
