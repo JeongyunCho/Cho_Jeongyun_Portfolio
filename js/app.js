@@ -1,10 +1,13 @@
 $(document).foundation()
-//TODO:stops foundation6 sticky nav when used on Vue
+
+//TODO: foundation6 sticky nav stops when used in Vue(?)
+
 var body = document.querySelector('body');
 var menuBtn = document.querySelector("#menuBtn");
 
 function addClass() {
     body.classList.toggle('overlay-menu-open');
+    document.querySelector("#inner").classList.toggle('hidden');
 }
   
 menuBtn.addEventListener("click",addClass,false);
@@ -27,19 +30,28 @@ var waypoint = new Waypoint({
     offset: -5
 });
 
-// $(function() {
-//     var text = $(".text");
- 
-//     $(window).scroll(function() {
-//       var scroll = $(window).scrollTop();
+
+//my name ~ animation.
+//find center
+var findNCenter = function() {
+    var elems = document.querySelectorAll('.center-vertical');
   
-//       if (scroll >= 100) {
-//         text.removeClass("hidden");
-//         console.log(text);
-//       } else {
-//         text.addClass("hidden");
-//         console.log(text);
-//       }
-//     });
-//   });
+    for(var i =0; i<elems.length; i++) {
+      elems[i].style.marginTop = (elems[i].parentNode.offsetHeight - elems[i].offsetHeight)/2 + 'px';
+    }
+  };
+ //rotate with translate3d 
+    var count = document.querySelector("#inner").querySelectorAll('p').length;
+    var i = 1;
+      console.log(count)
+  setInterval(function() {
+    if (i < count) {
+        document.querySelector("#inner").style.transform = 'translate3d(0,-' + i + '00%,0)';
+        i++;
+    }
+  }, 800);
+ //call when loaded and resized.
+  document.addEventListener('DOMContentLoaded', findNCenter);
+  window.addEventListener('resize', findNCenter);
+  
   
