@@ -1,1 +1,8 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.51 216.08"><defs><style>.cls-1{fill:#231f20;stroke:#fff;stroke-miterlimit:10;}</style></defs><title>mainLogo</title><g id="logo9"><polygon class="cls-1" points="186.84 0.5 62.66 0.5 0.58 108.04 62.66 215.58 186.84 215.58 248.93 108.04 186.84 0.5"/><polyline class="cls-1" points="187.63 0.84 125.28 108.84 187.63 215.08"/><polyline class="cls-1" points="123.95 0.84 61.6 108.84 123.95 215.08"/><line class="cls-1" x1="125.86" y1="109.25" x2="63.02" y2="109.25"/></g></svg>
+<svg id="mainLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.42 216.01"><defs>
+<style>.cls-1{fill:#fff;stroke:#231f20;stroke-miterlimit:10;stroke-width:5px;}
+.cls-1:hover {
+    fill: #000000;
+    transition-duration: .8s;
+    cursor: pointer;
+}
+</style></defs><title>mainLogo</title><g id="logo9"><polygon id="poly" class="cls-1" points="185.62 2.5 63.8 2.5 2.89 108 63.8 213.51 185.62 213.51 246.54 108 185.62 2.5"/><g id="line"><polyline id="white" class="cls-1" points="186.4 2.83 125.23 108.79 186.4 213.02"/><polyline id="white-2" data-name="white" class="cls-1" points="123.92 2.83 62.75 108.79 123.92 213.02"/><line id="white-3" data-name="white" class="cls-1" x1="125.79" y1="109.19" x2="64.15" y2="109.19"/></g></g></svg>

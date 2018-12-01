@@ -1,17 +1,28 @@
 (() =>{
-    // set up vue instance
-    const vm = new Vue({
-        el : "#app",
 
-        data : {
-
-
+    var vue = new Vue({
+        el: '#footer',
+        data: {
+          formOpen: false,
+          contactData: {
+            name: '',
+            email: '',
+            title: '',
+          }
         },
-
-        methods : {
-       
+        methods: {
+          resetForm: function () {
+            this.contactData = {
+              name: '',
+              email: '',
+              title: '',
+         
+            }
+          },
+          cancel: function() {
+            this.formOpen = false;
+            this.resetForm();
+          }
         }
-    });
-
-
+      });
 })();

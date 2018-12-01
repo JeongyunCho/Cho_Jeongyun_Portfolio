@@ -7,6 +7,7 @@
     <title>Cho Jeongyun Portfolio Site</title>
     <link rel="stylesheet" href="css/foundation.css">
 		<link rel="stylesheet" href="css/main.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Prata|Righteous" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -16,13 +17,13 @@
   <body>
 			<h1 class="hide">Cho Jeongyun Portfolio Site</h1>
 		
-			<header id="mainHeader">
+			<header id="mainHeader" data-magellan-target="mainHeader">
 				<div data-sticky-container>
 					<nav id="mainNav" data-sticky data-options="marginTop:0;" style="width:100%" data-sticky-on="small">
 						<h2 class="hide">Main Navigation</h2>
 						<ul class="menu align-center" data-magellan data-offset="100">
-							<li class="menu-text"><img id="mainLogo" src="images/mainLogo.svg" alt="logo"></li>
-							<li id="name">Jeongyun Cho</li>
+							<li class="menu-text"><a href="index.html"><object data="images/mainLogo.svg" type="image/svg+xml" id="mainLogo" ></object></a></li>
+							<li id="name"><a href="#mainHeader">Jeongyun Cho</a></li>
 							<li>
 								<div id="menuBtn" class="overlay-menu-button">
 									<div class="overlay-menu-button-toggle">
@@ -39,6 +40,7 @@
 
 			</header>
 			<!--header ends here-->
+			<div id="overlay" class="transparent"></div>
 			<!-- the trigger -->
 
 			<div class="overlay-menu">
@@ -58,12 +60,13 @@
 		<!--main starts here-->
 		<main id="app">
 			<!--topSection starts here-->
+		
 			<div class="full-screen">
-
+					
 					<div class="top-content-section">
 						<div class="top-bar">
 							<div class="top-bar-right">
-								<ul class="menu" data-magellan>
+								<ul class="menu" data-magellan>	
 									<li><a href="#work1">One</a></li>
 									<li><a href="#work2">Two</a></li>
 									<li><a href="#work3">Three</a></li>
@@ -74,7 +77,7 @@
 					</div>
 				
 					<div class="middle-content-section">
-						
+					
 				<div class="rotate center-vertical">
 						<div id="inner" class="inner">
 							<p>Hello.</p>
@@ -90,8 +93,9 @@
 							<p>Hello.</p>
 						</div>
 					</div>	
+					
 
-							<ul id="intro" class="text hidden">
+							<!-- <ul id="intro" class="text hidden">
 									<li>M</li>
 									<li class="ghost">y</li>
 									<li class="spaced">N</li>
@@ -112,28 +116,27 @@
 									<li class="ghost">h</li>
 									<li class="ghost">o</li>
 									<li class="ghost">.</li>
-								</ul>
+								</ul> -->
 
 						<h1>Welcome To My Website</h1>
-						<button class="button large">Contact Me</button>
+						<div id="aboutBtn"><a href="about.html">Want to Know Who I am?</a></div>
 					</div>
 				
-					<div class="bottom-content-section" data-smooth-scroll >
+					<div class="bottom-content-section" data-magellan >
 						<a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"/></svg></a>
 					</div>
 				
 				</div>
 				<!--topSection ends here-->
+			
 				<!--mainSection starts here-->
 				<div id="main-content-section" data-magellan-target="main-content-section">
 			
-						<div id="content-section" class="grid-x grid-padding-x" style="padding-top: 2rem;">
-								<button class="button large cell small-7 float-center">WORKS</button>
+						<div id="content-section" class="grid-x grid-padding-x">
+								<div id="worksT" class="cell small-7 float-center"><h3>WORKS</h3></div>
 
-									<div  class="porfworks cell small-12 medium-6" >
-										<div id="work1" data-magellan-target="work1">
-											<img src="http://placehold.it/1200x500/333" alt="Portfolio Work1">
-										</div>
+								<div id="work1" class="porfworks cell small-12 medium-6" data-magellan-target="work1">
+										<img src="http://placehold.it/1200x500/333" alt="Portfolio Work1">
 								</div>
 									<div id="work2" class="porfworks cell small-12 medium-6" data-magellan-target="work2">
 											<img src="http://placehold.it/1200x500/333" alt="Portfolio Work2">
@@ -147,9 +150,45 @@
 
 							</div>
 		
-				</div>
-				<!--mainSection ends here-->
+				</div><!--mainSection ends here-->
 			</main>
+
+
+			<!-- footer -->
+			<div class="container" id="footer">
+					<div class="contactForm" :class="{'open': formOpen}">
+						<div class="button-copy" v-show="!formOpen" @click="formOpen = true">Contact Me</div>
+						<form @submit="cancel()">
+				
+							<div class="form--field">
+								<label>Name *</label>
+								<input type="name" class="form--element" name="name" v-model="contactData.name" placeholder="Your Name" required="">
+							</div>
+
+								<div class="form--field">
+									<label>Email *</label>
+									<input type="email" class="form--element" name="email" v-model="contactData.email" placeholder="Your Email" required="">
+								</div>
+
+								<div class="form--field">
+									<label>Subject *</label>
+									<input type="text" class="form--element" name="title" v-model="contactData.title" placeholder="Title" required="">
+								</div>
+
+							<div class="form--field">
+								<label>Message</label>
+								<textarea class="form--element textarea" name="message" v-model="contactData.description" placeholder="Description">                                
+								</textarea>
+							</div>
+				
+							<button type="submit" class="submit-button">Submit</button>
+							<div class="cancel"><span @click="cancel()">Cancel</span></div>
+						</form>
+					</div>
+				</div>
+					<!-- footer ends -->
+				
+	
 				
 	
 

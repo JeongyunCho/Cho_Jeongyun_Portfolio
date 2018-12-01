@@ -1,0 +1,153 @@
+.container {
+    background-image: linear-gradient(-128deg, rgba(255, 181, 32, 0.93) 3%, rgba(239, 39, 153, 0.93) 88%, rgba(237, 18, 171, 0.93) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contactForm {
+    &.open {  
+      background-color: #FAFAFA;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      @media screen and (min-width: 1200px){
+        width: 50%;
+        }
+    
+      cursor: default;
+      form {
+        opacity: 1;
+        transition: opacity 0.1s ease;
+        transition-delay: 0.3s;
+        height: auto;
+       
+      }
+    }
+    transition: all 0.3s ease;
+    background-color: $mainYellow;
+    border-radius: 50rem;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .07);
+    cursor: pointer;
+    .button-copy {
+      text-align: center;
+      line-height: 15rem;
+      margin:0 .5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #f7f7f7;
+      font-size: $msize3F;
+      @media screen and (min-width: 1200px){
+      font-size: $dsize3F;
+      margin:0 1rem;
+      line-height: 20.5rem;
+      }
+    }
+    form {
+      transition: none;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+    
+    }
+    .cancel {
+      font-size: .8em;
+      text-align: center;
+      margin-top: .8em; 
+      span {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  .submit-button {
+    display: block;
+    background-color: #f64f59;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: $msize1F;
+    border: none;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    margin: 0 auto;
+    img {
+      position: relative;
+      top: 3px;
+      right: 6px;
+    }
+    &:hover {
+      background-color: rgba(255, 181, 32, 0.93);
+      cursor: pointer;
+      transition-duration: .4s;
+    }
+  }
+  
+  
+  form * {
+    outline: none;
+  }
+  
+  label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: bold;
+    user-select: none;
+  }
+  
+  .form--field {
+    width: 100%;
+    margin: 0.6rem 0;
+  }
+  
+  
+  .form--element {
+    background-color: #fff;
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    font-size: $msize1F;
+    padding: .3rem;
+    color: #3D3D3D;
+    width: 100%;
+    margin: .2rem 0;
+    box-sizing: border-box;
+    font-family: $head2F;
+    &:focus {
+      border: 1px solid $mainYellow;
+      border-radius: 2px;
+    }
+
+    &.textarea {
+      height: 100%;
+      resize: none;
+    }
+  }
+  
+  
+  #footer {
+    height: 100vh;
+    margin: 0;
+    font-family: $head2F;
+    font-size: 1em;
+    background-color: #F3F4F5;
+    cursor: default;
+  }
+  
+  
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  ::selection {
+    background-color: #F5617A;
+    color: #fff;
+  }
+  
+  ::-moz-selection {
+    background-color: #F5617A;
+    color: #fff;
+  }
