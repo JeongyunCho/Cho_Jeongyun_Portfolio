@@ -40,7 +40,12 @@
       font-weight: bold;
     }
   }
-  
+  .hoverLine{
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
   //midSec
 
   .middle-content-section {
@@ -76,6 +81,7 @@
     //toggle class
     .hidden{
       display: none;
+      visibility: hidden;
     }
     p {
       margin:0;
@@ -95,49 +101,6 @@
       
     }
   
-    // intro
-    // .text {
-     
-    //   text-align: center;
-    //   display: flex;
-    //   list-style: none;
-    //   border-bottom: 0;
-    //   width: 20%;
-    // }
-    // .hidden{
-    //   transition: all 0.5s ease;
-    // }
-    // .text.hidden {
-    //   border-bottom: 1px solid $mainYellow;
-    // }
-    
-    // .text li {
-    //   font-family: $head2F;
-    //   display: inline-block;
-      
-    //   font-size: 1.5em;
-    //   color: white;
-    //   opacity: 1;
-    //   transition: all 0.5s ease-in-out;
-    //   @media screen and (min-width: 640px){
-    //     font-size: 3em;
-    //   }
-    //   @media screen and (min-width: 1200px){
-    //     font-size: 4em;
-    //   }
-    // }
-    // .text.hidden li.spaced {
-    //   padding-left: 0;
-    // }
-    // .text li.spaced {
-    //   padding-left: 0.5em;
-    // }
-    
-    // .text.hidden li.ghost {
-    //   opacity: 0;
-    //   max-width: 0;
-    // }
-
 
     h1{
      color: $white;
@@ -164,14 +127,16 @@
           font-size:$msize1F;
         }
         &:hover{
-          transform: scale(2);
+          transform: scale(1.2);
           background: #b92b27;  /* fallback for old browsers */
           background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
           background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-          
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @media screen and (min-width: 1200px){
+            transform: scale(2);
+          }
         }
     }
   } //mid sec ends.

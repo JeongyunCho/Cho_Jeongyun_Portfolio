@@ -3,8 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
-  
+  .hiddenContainer{
+    visibility: hidden;
+  }
   .contactForm {
     &.open {  
       background-color: #FAFAFA;
@@ -151,3 +154,23 @@
     background-color: #F5617A;
     color: #fff;
   }
+  .footer-bottom{
+  
+    position: absolute;
+    width: 70%;
+    bottom: 0;
+    color: $white;
+    font-family: $head2F;
+    text-align: center;
+    font-size: $msizeFF;
+    
+    @media screen and (min-width: 1200px){
+      font-size: $msize1F;
+      
+  }
+  }
+
+  
+  
+
+  

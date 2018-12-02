@@ -22,7 +22,7 @@
 					<nav id="mainNav" data-sticky data-options="marginTop:0;" style="width:100%" data-sticky-on="small">
 						<h2 class="hide">Main Navigation</h2>
 						<ul class="menu align-center" data-magellan data-offset="100">
-							<li class="menu-text"><a href="index.html"><object data="images/mainLogo.svg" type="image/svg+xml" id="mainLogo" ></object></a></li>
+							<li class="menu-text"><object data="images/mainLogo.svg" type="image/svg+xml" id="mainLogo" ></object></li>
 							<li id="name"><a href="#mainHeader">Jeongyun Cho</a></li>
 							<li>
 								<div id="menuBtn" class="overlay-menu-button">
@@ -48,11 +48,11 @@
 					<div class="overlay"></div>
 					<div class="overlay"></div>
 					<div class="overlay-menu-wrapper">
-						<ul class="overlay-menu-list menu vertical">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Work</a></li>
-							<li><a href="#">Contact</a></li>
+						<ul class="overlay-menu-list menu vertical" data-magellan>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="works.html">Work</a></li>
+							<li id="contactNav"><a href="#footer">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -67,10 +67,10 @@
 						<div class="top-bar">
 							<div class="top-bar-right">
 								<ul class="menu" data-magellan>	
-									<li><a href="#work1">One</a></li>
-									<li><a href="#work2">Two</a></li>
-									<li><a href="#work3">Three</a></li>
-									<li><a href="#work4">Four</a></li>
+									<li class="hoverLine"><a href="#work1">One</a></li>
+									<li class="hoverLine"><a href="#work2">Two</a></li>
+									<li class="hoverLine"><a href="#work3">Three</a></li>
+									<li class="hoverLine"><a href="#work4">Four</a></li>
 								</ul>
 							</div>
 						</div>
@@ -79,7 +79,7 @@
 					<div class="middle-content-section">
 					
 				<div class="rotate center-vertical">
-						<div id="inner" class="inner">
+						<div id="inner" class="inner hideOn">
 							<p>Hello.</p>
 							<p>I</p>
 							<p>Am</p>
@@ -95,28 +95,7 @@
 					</div>	
 					
 
-							<!-- <ul id="intro" class="text hidden">
-									<li>M</li>
-									<li class="ghost">y</li>
-									<li class="spaced">N</li>
-									<li class="ghost">a</li>
-									<li class="ghost">m</li>
-									<li class="ghost">e</li>
-									<li class="spaced">i</li>
-									<li class="ghost">s</li>
-									<li class="spaced">J</li>
-									<li class="ghost">e</li>
-									<li class="ghost">o</li>
-									<li class="ghost">n</li>
-									<li class="ghost">g</li>
-									<li class="ghost">y</li>
-									<li class="ghost">u</li>
-									<li class="ghost">n</li>
-									<li class="spaced">C</li>
-									<li class="ghost">h</li>
-									<li class="ghost">o</li>
-									<li class="ghost">.</li>
-								</ul> -->
+							
 
 						<h1>Welcome To My Website</h1>
 						<div id="aboutBtn"><a href="about.html">Want to Know Who I am?</a></div>
@@ -136,18 +115,17 @@
 								<div id="worksT" class="cell small-7 float-center"><h3>WORKS</h3></div>
 
 								<div id="work1" class="porfworks cell small-12 medium-6" data-magellan-target="work1">
-										<img src="http://placehold.it/1200x500/333" alt="Portfolio Work1">
+										<img src="http://placehold.it/1200x800/333" alt="Portfolio Work1">
 								</div>
 									<div id="work2" class="porfworks cell small-12 medium-6" data-magellan-target="work2">
-											<img src="http://placehold.it/1200x500/333" alt="Portfolio Work2">
+											<img src="http://placehold.it/1200x800/333" alt="Portfolio Work2">
 									</div>
 									<div id="work3" class="porfworks cell small-12 medium-6" data-magellan-target="work3">
-											<img src="http://placehold.it/1200x500/333" alt="Portfolio Work3">
+											<img src="http://placehold.it/1200x800/333" alt="Portfolio Work3">
 									</div>
 									<div id="work4" class="porfworks cell small-12 medium-6" data-magellan-target="work4">
-											<img src="http://placehold.it/1200x500/333" alt="Portfolio Work4">
+											<img src="http://placehold.it/1200x800/333" alt="Portfolio Work4">
 									</div>
-
 							</div>
 		
 				</div><!--mainSection ends here-->
@@ -155,8 +133,8 @@
 
 
 			<!-- footer -->
-			<div class="container" id="footer">
-					<div class="contactForm" :class="{'open': formOpen}">
+			<footer class="container hideOn2" id="footer" data-magellan-target="footer">
+					<div class="contactForm" :class="{'open': formOpen}" @click="hideCopy()">
 						<div class="button-copy" v-show="!formOpen" @click="formOpen = true">Contact Me</div>
 						<form @submit="cancel()">
 				
@@ -185,7 +163,13 @@
 							<div class="cancel"><span @click="cancel()">Cancel</span></div>
 						</form>
 					</div>
-				</div>
+				
+				<div class="footer-bottom">
+							<div class="cell text-center">
+								<p>Copyright &copy; 2018 Jeongyun Cho • London based Freelance Web Designer & Developer</p>
+							</div>
+					</div>
+				</footer>
 					<!-- footer ends -->
 				
 	
@@ -196,6 +180,9 @@
 	<script src="js/vendor/what-input.js"></script>
 	<script src="js/vendor/foundation.js"></script>
 	<script src="js/app.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/contact.js"></script>
+	<script src="js/tweenMax.js"></script>
 	</body>
 </html>

@@ -2295,7 +2295,7 @@ a {
   text-decoration: none;
   cursor: pointer; }
   a:hover, a:focus {
-    color: #1468a0; }
+    color: black; }
   a img {
     border: 0; }
 

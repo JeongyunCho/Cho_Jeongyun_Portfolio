@@ -22,6 +22,13 @@
           cancel: function() {
             this.formOpen = false;
             this.resetForm();
+    
+          },
+          hideCopy: function(){
+            var x = window.matchMedia("(max-width: 640px)");
+            if (x.matches) { // If mobile size !
+              document.querySelector(".footer-bottom").classList.toggle('hiddenContainer');
+            }
           }
         }
       });

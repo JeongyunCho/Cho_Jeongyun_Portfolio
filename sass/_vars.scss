@@ -27,3 +27,18 @@ $overlay-menu-button-size: 2.25rem;
 
 $mainYellow: darken($overlay-menu-color, 20%);
 $mainBlue: rgb(23, 121, 186);
+
+@mixin transformRotate($property) {
+    -moz-transform: rotate($property) translate(-1px, 0px);
+    -webkit-transform: rotate($property) translate(-1px, 0px);
+    -o-transform: rotate($property) translate(-1px, 0px);
+    -ms-transform: rotate($property) translate(-1px, 0px);
+    transform: rotate($property) translate(-1px, 0px);
+  }
+  @mixin cursorNone() {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; 
+  }

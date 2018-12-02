@@ -1,0 +1,29 @@
+.widthF:before {
+    content: ""; 
+    display: block; 
+    margin: 0 auto; 
+    width: 100%; 
+    padding-top: 5vh; 
+    border-top: 5px solid #3b4371; 
+    transition-duration: 1s;
+}
+.widthF2:before {
+    width: 30%; 
+}
+
+    #worksTB{
+        position: relative;
+        text-align: center;
+        padding: 1%;
+        margin-bottom: 5%;
+   
+        p{
+            font-family: $text1F;
+            color: #3b4371;
+            font-size: $msize1F;
+            @media screen and (min-width: 1200px){
+                font-size: $dsize1F;
+            }
+        }
+    }
+

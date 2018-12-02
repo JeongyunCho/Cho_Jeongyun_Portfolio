@@ -6,16 +6,14 @@
     top: .5rem;
     left: 1.25rem;
     width:2.5rem;
+   
     @media screen and (min-width: 1200px){
         width: $dsize3F;
     }
+  
 }
 .rotateLeft{
-    -moz-transform: rotate(90deg) translate(-1px, 0px);
--webkit-transform: rotate(90deg) translate(-1px, 0px);
--o-transform: rotate(90deg) translate(-1px, 0px);
--ms-transform: rotate(90deg) translate(-1px, 0px);
-transform: rotate(90deg) translate(-1px, 0px);
+    @include transformRotate(90deg);
 transition-duration: .8s;
 }
 #name{
@@ -33,14 +31,9 @@ transition-duration: .8s;
             transition-duration: .8s;
             cursor: pointer;
     }
-    }
-   
-    
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; 
+    } 
+  
+    @include cursorNone();
   
     @media screen and (min-width: 1200px){
         font-size: 2.5em;
