@@ -29,15 +29,18 @@
     .overlay-menu-list {
       li {
         width: 100%;
-        font-size: $msize3F;
+        font-size: 3em;
         min-height: $msize3F;
         font-weight: bold;
         padding: 1rem;
         text-align: center;
         transition: all 0.2s ease-in;
+        font-family: $pointF;
+        font-weight: bold;
+        font-style: italic;
           @media screen and (min-width: 1200px){
-              font-size: $dsize3F;
-              min-height: $dsize3F;
+              font-size: 4em;
+              min-height: 2.5em;
           }
   
         &:hover {
@@ -45,7 +48,7 @@
           text-decoration-line: underline;
           text-decoration-style: double;
           text-decoration-color: white;
-             font-family: $pointF;
+          
   
           a {
             color: black;
@@ -84,7 +87,7 @@
   
   .overlay-menu-button {
     position: absolute;
-    top: .5rem;
+    top: .7rem;
     right: 1.25rem;
     @media screen and (min-width: 1200px){
       top: 1rem;

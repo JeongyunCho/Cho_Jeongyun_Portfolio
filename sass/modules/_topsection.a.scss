@@ -1,6 +1,6 @@
 
   #screenB{
-    background: url('../images/portofolio_profile2.png') center center no-repeat;
+    background: url('../images/portofolio_profile2.png') center center no-repeat fixed;
     background-size: cover;
   }
     //intro
@@ -14,7 +14,7 @@
       
     }
     .hiddenT{
-      transition: all 0.5s ease;
+      transition: all 1s;
       
     }
     .textA.hiddenT {

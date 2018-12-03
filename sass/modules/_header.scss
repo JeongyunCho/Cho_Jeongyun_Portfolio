@@ -1,17 +1,24 @@
 #mainHeader{
     height: 4rem;
 }
+
+
+
+       
+
 #mainLogo{
     position: fixed;
-    top: .5rem;
+    top: .7rem;
     left: 1.25rem;
     width:2.5rem;
    
     @media screen and (min-width: 1200px){
         width: $dsize3F;
+        top: 1rem;
     }
   
 }
+
 .rotateLeft{
     @include transformRotate(90deg);
 transition-duration: .8s;
@@ -20,8 +27,11 @@ transition-duration: .8s;
     position: fixed;
     top: .3rem;
     font-family: $pointF;
+    font-weight: bold;
+    font-style: italic;
     text-align: center;
     cursor: default;
+    font-size: 1.75em;
     
     a{
       
@@ -36,7 +46,7 @@ transition-duration: .8s;
     @include cursorNone();
   
     @media screen and (min-width: 1200px){
-        font-size: 2.5em;
+        font-size: 2.75em;
         top: 0rem;
        //TODO:letterSpacing
     }
