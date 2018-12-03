@@ -1,14 +1,1 @@
-<svg id="mainLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.42 216.01">
-<defs>
-<style>.cls-1{fill:#fff;stroke:#231f20;stroke-miterlimit:10;stroke-width:5px;}
-<!--TODO:won't work with links 
-    .cls-1:hover {
-    fill: #000000;
-    transition-duration: .8s;
-    cursor: pointer;
-} -->
-</style></defs><title>mainLogo</title><g id="logo9"><polygon id="poly" class="cls-1" points="185.62 2.5 63.8 2.5 2.89 108 63.8 213.51 185.62 213.51 246.54 108 185.62 2.5"/><g id="line"><polyline id="white" class="cls-1" points="186.4 2.83 125.23 108.79 186.4 213.02"/><polyline id="white-2" data-name="white" class="cls-1" points="123.92 2.83 62.75 108.79 123.92 213.02"/><line id="white-3" data-name="white" class="cls-1" x1="125.79" y1="109.19" x2="64.15" y2="109.19"/></g></g>
-<a xmlns="http://www.w3.org/2000/svg" id="anchor" xlink:href="../index.html" xmlns:xlink="http://www.w3.org/1999/xlink" target="_top">
-    <rect x="0" y="0" width="100%" height="100%" fill-opacity="0"/>
-</a>
-</svg>
+<svg id="mainLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241.65 211.46"><title>mainLogo2</title><g id="logo9"><polygon id="o" points="181.22 0.84 120.34 105.29 181.26 210.09 241.65 104.5 181.22 0.84"/><path id="h2" d="M124,123" transform="translate(-4 -16.54)"/><polygon id="h2-2" data-name="h2" points="62 106.46 116.54 211.46 180 211.46 118 106.46 62 106.46"/><polyline id="h1" points="179 0.46 118.57 0.46 62 104.46 118 104.46"/><polygon id="c" points="117 0 59.35 0 0 105.5 59 211.46 115 211.46 59.3 105.33 117 0"/></g></svg>
