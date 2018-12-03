@@ -11,6 +11,7 @@
         margin-bottom: 2rem;
         h3{
             font-family: $pointF;
+            font-weight: bold;
             color: $white;
             font-size: $msize3F;
             @media screen and (min-width: 1200px){
@@ -20,3 +21,105 @@
     }
  
 }
+div.snip0013 {
+   &:hover 
+   {
+    &> div{
+        &::before {
+            background: rgba(255, 255, 255, 0);
+            left: 2.7rem;
+            right: 2.7rem;
+            opacity: 1;
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+          }
+          i {
+            opacity: 0.9;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+            &.left-icon {
+                -webkit-transform: translate3d(-25%, -50%, 0);
+                transform: translate3d(-25%, -50%, 0);
+              }
+              &.right-icon {
+                -webkit-transform: translate3d(25%, -50%, 0);
+                transform: translate3d(25%, -50%, 0);
+              }
+          }
+    }
+    img {
+        opacity: 1;
+        transform: scale(1.2);
+  
+      }
+    
+}//hover ends
+
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #000000;
+  text-align: center;
+  img {
+    max-width: 100%;
+    opacity: 0.35;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+    transition: 0.3s ease-in-out;
+  }
+  &> div {
+      &::before {
+        position: absolute;
+        top: 30px;
+        right: 50%;
+        bottom: 30px;
+        left: 50%;
+        border-left: 1px solid rgba(255, 255, 255, 0.8);
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
+        content: '';
+        opacity: 0;
+        background-color: #ffffff;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+        -webkit-transition-delay: 0.3s;
+        transition-delay: 0.3s;
+      }
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+   
+        color: #ffffff;
+        i {
+            font-size: 50px;
+            opacity: 0;
+            top: 50%;
+            position: relative;
+            -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+            display: inline-block;
+            .left-icon {
+                -webkit-transform: translate3d(0, -50%, 0);
+                transform: translate3d(0, -50%, 0);
+              }
+              .right-icon {
+                -webkit-transform: translate3d(0, -50%, 0);
+                transform: translate3d(0, -50%, 0);
+              }
+          }
+   
+  }
+}
+
+
+
+
+
+
+
