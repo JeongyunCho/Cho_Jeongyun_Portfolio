@@ -21,7 +21,7 @@ var waypoint = new Waypoint({
 var waypoint2 = new Waypoint({
   element: document.querySelector('.middle-content-section'),
   handler: function(direction) {
-    console.log("fired");
+    // console.log("fired");
   var bar = document.querySelector("#worksTB");
     if ( bar.classList.contains('widthF2') ){
       bar.classList.remove('widthF2');
