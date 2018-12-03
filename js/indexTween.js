@@ -1,27 +1,20 @@
 (() =>{
 
-//tweenMax
+  //tweenMax
 
-var menuBtn = document.querySelector("#menuBtn");
-var logo = document.querySelector("#mainLogo");
+
 var conSec = document.querySelector('#content-section')
 var footer = document.querySelector('#footer')
 var ps = document.querySelectorAll(".porfworks");
 var p1s = document.querySelectorAll(".p1");
 var p2s = document.querySelectorAll(".p2");
-var ball = document.querySelector(".contactForm")
+var ball = document.querySelector(".contactForm");
+var arrowD = document.querySelector("#arrowD");
 
-//onload
-
-TweenMax.delayedCall(1, myFunction);
 for (var i=0;i<ps.length;i++){
-    ps[i].style.visibility = "hidden";
+  ps[i].style.visibility = "hidden";
 }
-function myFunction() {
-TweenMax.from(logo, 1, {opacity:0, scale:0, delay:0.5, ease:Power2.easeOut});
-TweenMax.from(menuBtn, 1, {opacity:0, scale:2, delay:1, ease:Power2.easeOut});
-}
-
+  TweenMax.to(arrowD, 0.4, {repeat: -1, yoyo: true,ease: Power1.easeIn, y: 10}); 
 
 var waypoint = new Waypoint({
     element: conSec,
@@ -65,5 +58,7 @@ var waypoint = new Waypoint({
     },
     offset: 130
   });
+
+
 
 })();

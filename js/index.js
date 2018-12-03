@@ -27,4 +27,9 @@ var findNCenter = function() {
   document.addEventListener('DOMContentLoaded', findNCenter);
   window.addEventListener('resize', findNCenter);
   
+
+  
+
+
+
 })();
