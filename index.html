@@ -25,7 +25,7 @@
 							<li class="menu-text"><object data="images/mainLogo.svg" type="image/svg+xml" id="mainLogo" ></object></li>
 							<li id="name"><a href="#mainHeader">Jeongyun Cho</a></li>
 							<li>
-								<div id="menuBtn" class="overlay-menu-button">
+								<div id="menuBtn" class="overlay-menu-button openBtn">
 									<div class="overlay-menu-button-toggle">
 										<div class="bar1"></div>
 										<div class="bar2"></div>
@@ -51,8 +51,8 @@
 						<ul class="overlay-menu-list menu vertical" data-magellan>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="about.html">About</a></li>
-							<li><a href="works.html">Work</a></li>
-							<li id="contactNav"><a href="#footer">Contact</a></li>
+							<li class="openBtn"><a href="#worksT">Work</a></li>
+							<li class="openBtn"><a href="#footer">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -79,7 +79,7 @@
 					<div class="middle-content-section">
 					
 				<div class="rotate center-vertical">
-						<div id="inner" class="inner hideOn">
+						<div id="inner" class="inner">
 							<p>Hello.</p>
 							<p>I</p>
 							<p>Am</p>
@@ -101,7 +101,7 @@
 						<div id="aboutBtn"><a href="about.html">Want to Know Who I am?</a></div>
 					</div>
 				
-					<div class="bottom-content-section hideOn3" data-magellan >
+					<div class="bottom-content-section" data-magellan >
 						<a href="#main-content-section"><svg id="arrowD" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"/></svg></a>
 					</div>
 				
@@ -112,7 +112,7 @@
 				<div id="main-content-section" data-magellan-target="main-content-section">
 			
 						<div id="content-section" class="grid-x grid-margin-x hidden">
-								<div id="worksT" class="cell small-6 small-offset-3  "><h3>WORKS</h3></div>
+								<div id="worksT" class="cell small-6 small-offset-3" data-magellan-target="worksT"><h3>WORKS</h3></div>
 
 								<div id="work1" class="porfworks p1 cell small-12 medium-6 snip0013" data-magellan-target="work1">
                                         <img src="images/work1_car.png" alt="Portfolio Work1">
@@ -154,7 +154,7 @@
 
 
 			<!-- footer -->
-			<footer class="container hideOn2" id="footer" data-magellan-target="footer">
+			<footer class="container" id="footer" data-magellan-target="footer">
 					<div class="contactForm" :class="{'open': formOpen}" @click="hideCopy()">
 						<div class="button-copy" v-show="!formOpen" @click="formOpen = true">Contact Me</div>
 						<form @submit="cancel()">
