@@ -1,1 +1,44 @@
 //Variables
+$text1F : 'Open Sans', sans-serif;
+$head1F : 'Prata', serif;
+$head2F:'Righteous', cursive;
+$text2F: 'Playfair Display', serif;
+$pointF: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$msize1F : 1.125em;
+$msize2F : 1.250em;
+$msize3F : 2.250em;
+$msizeFF : 0.750em;
+$dsize1F : 1.250em;
+$dsize2F : 2.250em;
+$dsize3F : 3em;
+$dsizeFF : 0.938em;
+$white : #ffffff;
+$light-gray : #666666;
+$dark-gray: #333333;
+
+$full-screen-bg: url('https://images.pexels.com/photos/378273/pexels-photo-378273.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb') center center no-repeat;
+$full-screen-bg-size: cover;
+$full-screen-text-color: $white;
+
+
+$overlay-menu-color: #feda6a;
+$overlay-menu-text-color: #ffffff;
+$overlay-menu-button-size: 2.25rem;
+
+$mainYellow: darken($overlay-menu-color, 20%);
+$mainBlue: rgb(23, 121, 186);
+
+@mixin transformRotate($property) {
+    -moz-transform: rotate($property) translate(-1px, 0px);
+    -webkit-transform: rotate($property) translate(-1px, 0px);
+    -o-transform: rotate($property) translate(-1px, 0px);
+    -ms-transform: rotate($property) translate(-1px, 0px);
+    transform: rotate($property) translate(-1px, 0px);
+  }
+  @mixin cursorNone() {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; 
+  }

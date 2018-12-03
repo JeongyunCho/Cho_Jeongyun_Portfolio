@@ -1,0 +1,21 @@
+#content-section{
+    margin-top: 2rem;
+
+    .porfworks{
+        margin-bottom: 2rem;
+    }
+    #worksT{
+        background-color:#f64f59;
+        text-align: center;
+        
+        margin-bottom: 2rem;
+        h3{
+            font-family: $pointF;
+            color: $white;
+            font-size: $msize3F;
+            @media screen and (min-width: 1200px){
+                font-size: $dsize3F;
+            }
+        }
+    }
+}

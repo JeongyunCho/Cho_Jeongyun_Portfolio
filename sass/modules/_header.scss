@@ -1,0 +1,56 @@
+#mainHeader{
+    height: 4rem;
+}
+#mainLogo{
+    position: fixed;
+    top: .5rem;
+    left: 1.25rem;
+    width:2.5rem;
+   
+    @media screen and (min-width: 1200px){
+        width: $dsize3F;
+    }
+  
+}
+.rotateLeft{
+    @include transformRotate(90deg);
+transition-duration: .8s;
+}
+#name{
+    position: fixed;
+    top: .3rem;
+    font-family: $pointF;
+    text-align: center;
+    cursor: default;
+    
+    a{
+      
+  
+        &:hover{
+            color: $mainYellow;
+            transition-duration: .8s;
+            cursor: pointer;
+    }
+    } 
+  
+    @include cursorNone();
+  
+    @media screen and (min-width: 1200px){
+        font-size: 2.5em;
+        top: 0rem;
+       //TODO:letterSpacing
+    }
+}
+.colorChangeYellow{
+    color: $white;
+    transition-duration: .8s;
+    @media screen and (min-width: 1200px){
+        letter-spacing: 2rem;
+    }
+   
+}
+
+
+
+
+

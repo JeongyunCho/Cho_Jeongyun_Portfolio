@@ -1,8 +1,11 @@
 //import vars and modules
 @import '_vars';
 //import required modules
-
-
 @import 'modules/_header';
+@import 'modules/_menu';
+@import 'modules/_topsection';
 @import 'modules/_content';
 @import 'modules/_footer';
+@import 'modules/_footer.a';
+@import 'modules/_topsection.a';
+@import 'modules/_content.a';
