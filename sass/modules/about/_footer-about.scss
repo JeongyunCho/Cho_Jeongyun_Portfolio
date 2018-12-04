@@ -3,7 +3,7 @@
     p{
       color:$white;
     }
-     background: darken(#3b4371, 10%);  /* fallback for old browsers */
+ 
     height: 8vh;
     font-family: $head2F;
     font-size: $msizeFF;
@@ -16,6 +16,9 @@
       height: 4vh;
   }
     
+  }
+  .aboutF{
+    background: darken(#3b4371, 10%);  /* fallback for old browsers */
   }
 
   

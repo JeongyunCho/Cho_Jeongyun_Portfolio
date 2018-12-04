@@ -6,7 +6,10 @@
 @import 'modules/_topsection';
 @import 'modules/_content';
 @import 'modules/_footer';
-@import 'modules/about/content-about';
-@import 'modules/about/footer-about';
-@import 'modules/about/topsection-about';
-@import 'modules/avApp/topsection-work1';
+@import 'modules/about/_content-about';
+@import 'modules/about/_footer-about';
+@import 'modules/about/_topsection-about';
+@import 'modules/works/_topsection-works';
+@import 'modules/works/_footer-works';
+@import 'modules/works/_image-grid-work1';
+@import 'modules/_lightbox';

@@ -1,0 +1,67 @@
+
+  #screenC{
+    @include topBkgrd('../images/work1_car-m.png','../images/work1_car-d.png');
+  }
+  #screenD{
+    @include topBkgrd('../images/work2_bottle-m.png','../images/work2_bottle-d.png');
+   }
+   #screenE{
+    @include topBkgrd('../images/work3_kim-m.png','../images/work3_kim-d.png');
+   }
+   #screenF{
+    @include topBkgrd('../images/work3_kim-m.png','../images/work3_kim-d.png');
+   }
+   iframe{
+    border-width: 0px;
+   }
+
+  //content
+  #worksTB{
+      .widthUnF{
+    
+        &:after {
+          content: ""; 
+          display: block; 
+          margin: 0 auto; 
+          width: 60%; 
+          border-bottom: 5px solid $work1-brown;
+          transition-duration: 1s;
+       }
+      }
+      .ivory{
+        &:after {
+          border-bottom: 5px solid #ab9d9d;
+       }
+      }
+      .darkRed{
+        &:after {
+          border-bottom: 5px solid #b01f24;
+       }
+       }
+       .black{
+        &:after {
+          border-bottom: 5px solid black;
+       }
+       }
+    .widthUnF2:after {
+        width: 20%; 
+    }
+  }
+  .work1T{
+  
+    margin-bottom: 5vh;
+    h2{
+      font-family: $head2F;
+      font-weight: bold;
+      font-size: 4em;
+    }
+
+    p{
+      color:black;
+      font-family: $text1F;
+    }
+    .appIcon{
+      font-size: 3rem;
+      margin: 0 0.15%;
+    }
+  }
