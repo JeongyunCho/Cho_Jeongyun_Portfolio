@@ -1,0 +1,11 @@
+
+  #screenC{
+    background: url('../images/work1_car-m.png') center center no-repeat fixed;
+    background-size: cover;
+    height: 40vh;
+    @media screen and (min-width: 1200px){
+      background: url('../images/work1_car-d.png') center center no-repeat fixed;
+    }
+
+  }
+  
