@@ -9,32 +9,16 @@
     //TODO: foundation6 sticky nav stops when used in Vue(?)
     
     var body = document.querySelector('body');
-    var menuBtn = document.querySelector("#menuBtn");
-    var contactNavBtn = document.querySelector("#contactNav");
-    var hideOn = document.querySelector(".hideOn");
-    var ps = document.querySelectorAll(".porfworks");
-
+    var openBtn = document.querySelectorAll(".openBtn");
     function addClassMenu() {
-        var hideOn2 = document.querySelector(".hideOn2");
-        var hideOn3 = document.querySelector(".hideOn3");
         body.classList.toggle('overlay-menu-open');
-        hideOn.classList.toggle('hiddenContainer');
-        hideOn2.classList.toggle('hiddenContainer');
-        hideOn3.classList.toggle('hiddenContainer');
-        if ( hideOn.classList.contains('hiddenContainer') ){
-            for (var i=0;i<ps.length;i++){
-                ps[i].style.visibility = "hidden";
-            }
-        }else{
-            for (var i=0;i<ps.length;i++){
-                ps[i].style.visibility = "visible";
-            }
-        }
-       
     };
+    for(i=0;i<openBtn.length;i++){
+        openBtn[i].addEventListener("click",addClassMenu,false);
+    }
+   
+
     
-    menuBtn.addEventListener("click",addClassMenu,false);
-    contactNavBtn.addEventListener("click",addClassMenu,false);
     //**** */Doesn't work when text is defined outside.
     var waypoint = new Waypoint({
           element: document.querySelector('.middle-content-section'),

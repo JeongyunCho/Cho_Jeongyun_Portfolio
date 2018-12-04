@@ -1,7 +1,11 @@
 
   #screenB{
-    background: url('../images/portofolio_profile2.png') center center no-repeat fixed;
+    background: url('../images/portofolio_profile2-m.png') center center no-repeat fixed;
     background-size: cover;
+    @media screen and (min-width: 1200px){
+      background: url('../images/portofolio_profile2-d.png') center center no-repeat fixed;
+ 
+    }
   }
     //intro
 
