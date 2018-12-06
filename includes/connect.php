@@ -1,7 +1,7 @@
 <?php 
 $dbn_dsn = array(
   'host' => 'localhost',
-  'dbname' => 'db_cho-portfolio',
+  'dbname' => 'jeong129_portfolio',
   'charset' => 'utf8',
 );
 

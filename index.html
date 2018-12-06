@@ -23,7 +23,7 @@
 						<h2 class="hide">Main Navigation</h2>
 						<ul class="menu align-center" data-magellan data-offset="100">
 							<li class="menu-text"><object data="images/mainLogo.svg" type="image/svg+xml" id="mainLogo" ></object></li>
-							<li id="name"><a href="#mainHeader">Jeongyun Cho</a></li>
+							<li id="nameT"><a href="#mainHeader">Jeongyun Cho</a></li>
 							<li>
 								<div id="menuBtn" class="overlay-menu-button openBtn">
 									<div class="overlay-menu-button-toggle">
@@ -177,26 +177,26 @@
                 <h2 class="hide">Main Footer Contact Form</h2>
 					<div class="contactForm" v-bind:class="{'open': formOpen}" v-on:click="hideCopy()">
 						<div class="button-copy" v-show="!formOpen" v-on:click="formOpen = true">Contact Me</div>
-						<form v-on:submit="cancel()">
-				
+						<form v-on:submit="cancel()" class="contact-form" action="includes/contact.php" method="post">
+
 							<div class="form--field">
-								<label>Name *</label>
-								<input type="text" class="form--element" name="name" v-model="contactData.name" placeholder="Your Name" required="">
+								<label for="name">Name *</label>
+								<input type="text" id="name" class="form--element" name="name" placeholder="Your Name" required="">
 							</div>
 
 								<div class="form--field">
-									<label>Email *</label>
-									<input type="email" class="form--element" name="email" v-model="contactData.email" placeholder="Your Email" required="">
+									<label for="email">Email *</label>
+									<input type="email" id="email" class="form--element" name="email" placeholder="Your Email" required="">
 								</div>
 
 								<div class="form--field">
-									<label>Subject *</label>
-									<input type="text" class="form--element" name="title" v-model="contactData.title" placeholder="Title" required="">
+									<label for="subject">Subject *</label>
+									<input type="text" id="subject" class="form--element" name="subject" placeholder="Title" required="">
 								</div>
 
 							<div class="form--field">
-								<label>Message</label>
-								<textarea class="form--element textarea" name="message" v-model="contactData.description" placeholder="Description">                                
+								<label for="message">Message</label>
+								<textarea type="text" id="message"  class="form--element textarea" name="message" placeholder="Description">                                
 								</textarea>
 							</div>
 				

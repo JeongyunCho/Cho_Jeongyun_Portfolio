@@ -23,7 +23,7 @@
     var waypoint = new Waypoint({
           element: document.querySelector('#app'),
           handler: function(direction) {
-          const nameAnim = document.querySelector("#name").querySelector("a");
+          const nameAnim = document.querySelector("#nameT").querySelector("a");
           const logo = document.querySelector("#mainLogo");
           //console.log(nameAnim);  
           if ( nameAnim.classList.contains('colorChangeYellow') ){
