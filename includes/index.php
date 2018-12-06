@@ -3,13 +3,17 @@
 require 'functions.php';
 
 if (isset($_GET['id'])) {
-  
     // pass the connection and the movie id to a function
-  $data = get_one_carData($conn, $_GET['id']);
+  $data = get_work_data($conn, $_GET['id']);
   echo json_encode($data);
-} else {
+}
+else if(isset($_GET['about'])){
+  $data = get_about_data($conn);
+  echo json_encode($data);
+}
+else {
     // pass the connection and the movie id to a function
-  $data = get_all_carData($conn);
-  echo json_encode($data);
+    $data = get_image_data($conn);
+    echo json_encode($data);
 }
 ?>

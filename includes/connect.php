@@ -1,7 +1,7 @@
 <?php 
 $dbn_dsn = array(
   'host' => 'localhost',
-  'dbname' => 'db_autoapp',
+  'dbname' => 'db_cho-portfolio',
   'charset' => 'utf8',
 );
 

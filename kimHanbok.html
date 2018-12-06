@@ -68,7 +68,7 @@
 							<div id="worksTB" class="cell small-11 medium-10 float-center work1T">
 									<h2 class="hide">Work Description</h2>
 								<div class="widthUnF darkRed">
-									<h2 class="text-center">Kim Kyeongmi Hanbok</h2>
+									<h2 class="text-center">{{workTitle}}</h2>
 								</div>
 								<div class="text-center">
 								<i class="ion-ios-brush appIcon"></i>
@@ -76,9 +76,8 @@
 								<i class="ion-ios-code appIcon"></i>
 								</div>
 						
-								<p>Hello! My name is Jeongyun Cho and I'm passionate about Motion Graphics, Design, and Front-End Development. I was born in Ansan, Korea, studied there Clothing Design for a while. However, I realized that I really want to study something more dynamic in a new environment.</p> 
-								<p>When I was decided to go to London, ON, Canada I looked at all the courses at Fanshawe College and try to find the most attractive course. Music, Movie, Coding, Fashion was my interests and I found a course which has a design, coding combined together, Interactive Media Design Program. I did not hesitate to take the course and I'm on my Second Year now. So far I'm confident of what I learned and can see my improvement every day. I'm looking forward to what I could build when I graduate.</p>
-									<p>- I'm updating my story whenever I have words to write down :)</p>
+								<p>{{workDesc}}</p> 
+								<a class="urlWeb" href="http://kimhanbok.com/" target="_blank">Kim Kyeong Mi Hanbok</a>
 							</div>
 
 					</div>
@@ -95,11 +94,11 @@
 
 			<div id="workPhotos"  class="image-grid">
 					<h3 class="hide">Photos of Portfolio Work</h3>
-					<div id="b1" class="block clickme"><img src="images/portofolio_profile2-m.png" alt=""></div>
-					<div id="b2" class="block clickme"><img src="images/work1_car-m.png" alt=""></div>
-					<div id="b5" class="block b clickme"><img src="images/work2_bottle-m.png" alt=""></div>
-					<div id="b6" class="block b clickme"><img src="images/work3_kim-m.png" alt=""></div>
-					<div id="b7" class="block b clickme"><img src="images/work1_car-m.png" alt=""></div>
+					<div id="b1" class="block clickme"><img :src="'images/'+workImageData[0]" alt="work1 Car render1"></div>
+					<div id="b2" class="block clickme"><img :src="'images/'+workImageData[2]" alt="work1 Car render2"></div>
+					<div id="b5" class="block b clickme"><img :src="'images/'+workImageData[3]" alt="work1 Car render3"></div>
+					<div id="b6" class="block b clickme"><img :src="'images/'+workImageData[4]" alt="work1 Car render4"></div>
+					<div id="b7" class="block b clickme"><img :src="'images/'+workImageData[5]" alt="work1 Car render5"></div>
 				  </div>
 					</div><!--mainSection ends here-->
 			</main>
@@ -117,7 +116,7 @@
 	
 				
 	
-
+	<script src="js/worksData.js"></script>
 	<script src="js/vendor/jquery.js"></script>
 	<script src="js/vendor/what-input.js"></script>
 	<script src="js/vendor/foundation.js"></script>
