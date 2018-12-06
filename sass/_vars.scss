@@ -8,6 +8,7 @@ $msize1F : 1.125em;
 $msize2F : 1.250em;
 $msize3F : 2.250em;
 $msizeFF : 0.750em;
+$msizeFF2 : 0.950em;
 $dsize1F : 1.250em;
 $dsize2F : 2.250em;
 $dsize3F : 3em;
@@ -15,8 +16,9 @@ $dsizeFF : 0.938em;
 $white : #ffffff;
 $light-gray : #666666;
 $dark-gray: #333333;
+$about-blue: #3b4371;
+$work1-brown: #bd6c4c;
 
-$full-screen-bg: url('https://images.pexels.com/photos/378273/pexels-photo-378273.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb') center center no-repeat;
 $full-screen-bg-size: cover;
 $full-screen-text-color: $white;
 
@@ -42,3 +44,29 @@ $mainBlue: rgb(23, 121, 186);
       -ms-user-select: none; /* Internet Explorer/Edge */
           user-select: none; 
   }
+
+  //lightbox
+  $lightbox-bgcolor: Black;
+
+$lightboxNav-bgcolor: #343434;
+  //mixin
+  @mixin lightboxBtn($right:2em, $top:2em, $space:3em, $btnBkgrd:rgba(0, 0, 0, 0.5)) {
+    position: absolute;
+    right: $right;
+    top: $top;
+    height: $space;
+    width: $space;
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  @mixin topBkgrd($topbkgrdImageM,$topbkgrdImageD){
+  background: url($topbkgrdImageM) center center no-repeat fixed;
+  background-size: cover;
+  height: 40vh;
+  @media screen and (min-width: 1200px){
+    background: url($topbkgrdImageD) center center no-repeat fixed;
+  }
+}

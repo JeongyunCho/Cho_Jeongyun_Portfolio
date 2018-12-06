@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Prata|Righteous" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CPrata%7CRighteous" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -97,7 +97,7 @@
 
 							
 
-						<h1>Welcome To My Website</h1>
+						<h2 id="welcome">Welcome To My Website</h2>
 						<div id="aboutBtn"><a href="about.html">Want to Know Who I am?</a></div>
 					</div>
 				
@@ -115,9 +115,10 @@
 								<div id="worksT" class="cell small-6 small-offset-3" data-magellan-target="worksT"><h3>WORKS</h3></div>
 
 								<div id="work1" class="porfworks p1 cell small-12 medium-6" data-magellan-target="work1">
-                                        <a href="avApp.html">   
+                                    <h4 class="hide">Portfolio work1</h4>    
+                                    <a href="autoApp.html">   
                                             <div class="snip0013">
-                                        <img data-interchange="[images/work1_car-m.png, small], [images/work1_car-d.png, large]"> 
+                                        <img :src="'images/' +work1Image" alt="Cho Portfolio Piece 1"> 
                                         <div>
                                             <i class="ion-ios-videocam left-icon"></i>
                                            <i class="ion-ios-brush right-icon"></i>
@@ -126,10 +127,11 @@
                                         </a>
                                     </div>
                                 
-									<div id="work2" class="porfworks p1 cell small-12 medium-6 snip0013" data-magellan-target="work2">
-                                            <a href="avApp.html">   
+									<div id="work2" class="porfworks p1 cell small-12 medium-6 snip0013" data-magellan-target="work2" >
+                                            <h4 class="hide">Portfolio work2</h4>    
+                                        <a href="infuser.html">   
                                                     <div class="snip0013">
-                                        <img data-interchange="[images/work2_bottle-m.png, small], [images/work2_bottle-d.png, large]">    
+														<img :src="'images/' +work2Image" alt="Cho Portfolio Piece 2">     
                                             <div>
                                                 <i class="ion-ios-brush left-icon left-icon2"></i>
                                                 <i class="ion-ios-videocam left-icon"></i>
@@ -138,24 +140,25 @@
                                            </div>	
                                           </a>
                                         </div>
-									<div id="work3" class="porfworks p2 cell small-12 medium-6 snip0013" data-magellan-target="work3">
-                                            <a href="avApp.html">   
+									<div id="work3" class="porfworks p2 cell small-12 medium-6 snip0013" data-magellan-target="work3" >
+                                            <h4 class="hide">Portfolio work3</h4>      
+                                        <a href="kimHanbok.html">   
                                                     <div class="snip0013">
-											<img data-interchange="[images/work3_kim-d.png, small], [images/work3_kim-d.png, large]"> 
+														<img :src="'images/' +work3Image" alt="Cho Portfolio Piece 3"> 
                                         
                                             <div>
-                                                    <i class="ion-ios-videocam left-icon left-icon2"></i>
-                                                    <i class="ion-ios-brush left-icon"></i>
-                                                    <i class="ion-ios-pricetag right-icon"></i>
-                                                    <i class="ion-ios-code right-icon right-icon2"></i>
+                                                    <i class="ion-ios-brush left-icon left-icon2"></i>
+                                                    <i class="ion-ios-pricetag left-icon"></i>
+                                                    <i class="ion-ios-code right-icon"></i>
                                             </div>
                                         </div>	
                                         </a>
                                         </div>
-									<div id="work4" class="porfworks p2 cell small-12 medium-6 snip0013" data-magellan-target="work4">
-                                     <a href="avApp.html">   
+									<div id="work4" class="porfworks p2 cell small-12 medium-6 snip0013" data-magellan-target="work4" >
+                                            <h4 class="hide">Portfolio work4</h4>   
+                                        <a href="demoReel.html">   
                                      <div class="snip0013">    
-                                        <img data-interchange="[images/work3_kim-d.png, small], [images/work3_kim-d.png, large]"> 
+										<img :src="'images/' +work3Image" alt="Cho Portfolio Piece 4">  
                                             <div>
                                                     <i class="ion-ios-videocam left-icon"></i>
                                                     <i class="ion-ios-brush right-icon"></i>
@@ -171,13 +174,14 @@
 
 			<!-- footer -->
 			<footer class="container" id="footer" data-magellan-target="footer">
-					<div class="contactForm" :class="{'open': formOpen}" @click="hideCopy()">
-						<div class="button-copy" v-show="!formOpen" @click="formOpen = true">Contact Me</div>
-						<form @submit="cancel()">
+                <h2 class="hide">Main Footer Contact Form</h2>
+					<div class="contactForm" v-bind:class="{'open': formOpen}" v-on:click="hideCopy()">
+						<div class="button-copy" v-show="!formOpen" v-on:click="formOpen = true">Contact Me</div>
+						<form v-on:submit="cancel()">
 				
 							<div class="form--field">
 								<label>Name *</label>
-								<input type="name" class="form--element" name="name" v-model="contactData.name" placeholder="Your Name" required="">
+								<input type="text" class="form--element" name="name" v-model="contactData.name" placeholder="Your Name" required="">
 							</div>
 
 								<div class="form--field">
@@ -197,7 +201,7 @@
 							</div>
 				
 							<button type="submit" class="submit-button">Submit</button>
-							<div class="cancel"><span @click="cancel()">Cancel</span></div>
+							<div class="cancel"><span v-on:click="cancel()">Cancel</span></div>
 						</form>
 					</div>
 				
@@ -212,14 +216,15 @@
 	
 				
 	
-
+	<script src="js/mainData.js"></script>
 	<script src="js/vendor/jquery.js"></script>
 	<script src="js/vendor/what-input.js"></script>
 	<script src="js/vendor/foundation.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/header.js"></script>
 	<script src="js/index.js"></script>
-    <script src="js/contact.js"></script>
-    <script src="js/indexTween.js"></script>
+	<script src="js/contact.js"></script>
+	<script src="js/indexTween.js"></script>
+
 	</body>
 </html>

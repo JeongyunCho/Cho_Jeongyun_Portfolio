@@ -21,7 +21,7 @@
     
     //**** */Doesn't work when text is defined outside.
     var waypoint = new Waypoint({
-          element: document.querySelector('.middle-content-section'),
+          element: document.querySelector('#app'),
           handler: function(direction) {
           const nameAnim = document.querySelector("#name").querySelector("a");
           const logo = document.querySelector("#mainLogo");
@@ -34,7 +34,7 @@
             logo.classList.add('rotateLeft');
           }
           },
-          offset: 100
+          offset: 0
       });
 
 

@@ -1,0 +1,70 @@
+//lightbox
+#lightbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+      &.open {
+          display: block;
+          z-index: 1;
+      }
+      #lightbox_content {
+    
+          #close {
+            @include lightboxBtn;
+            z-index: 3;
+            &:hover{
+                transition-duration: 0.2s;
+                color:black;
+                transform: scale(1.2);
+                
+            }
+          
+          }
+          #left {
+              @include lightboxBtn(0,45vh,5em,rgba(0, 0, 0, 0.1));
+              left: 3%;
+              z-index: 3;
+              &:hover{
+                transition-duration: 0.3s;
+
+                transform: scale(1.2);
+            }
+          }
+          #right {
+              @include lightboxBtn(3%,45vh,5em,rgba(0, 0, 0, 0.1));
+              z-index: 3;
+              &:hover{
+                transition-duration: 0.2s;
+                transform: scale(1.2);
+            }
+          }
+          #imgBox{
+            display: block;
+            height: auto;
+            margin: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+          }
+           
+      }
+    
+  
+   
+}//lightbox Ends
+
+
+
+
+
+
+
+
+
+

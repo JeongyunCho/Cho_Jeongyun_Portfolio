@@ -4,7 +4,7 @@
     margin: 0 auto; 
     width: 100%; 
     padding-top: 5vh; 
-    border-top: 5px solid #3b4371; 
+    border-top: 5px solid $about-blue;
     transition-duration: 1s;
 }
 .widthF2:before {
@@ -15,18 +15,21 @@
         position: relative;
         text-align: justify;
         padding: 1%;
-        margin-bottom: 5%;
-   
+        margin-bottom: 1%;
         p{
             font-family: $text1F;
-            color: #3b4371;
-            font-size: $msizeFF;
+            font-size: $msizeFF2;
             @media screen and (min-width: 640px){
                 font-size: $msize1F;
             }
             @media screen and (min-width: 1200px){
                 font-size: $dsize1F;
             }
+        }
+    }
+    .aboutT{
+        p{
+         color: $about-blue;
         }
     }
 
