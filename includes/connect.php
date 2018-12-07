@@ -8,8 +8,8 @@ $dbn_dsn = array(
 $dsn = 'mysql: ' . http_build_query($dbn_dsn, '', ';');
 
 //DB Credentials
-$db_user = 'jeong129_cho';
-$db_pass = '@20131003Aa';  //need to be changed depends on COM
+$db_user = 'root';
+$db_pass = '';  //need to be changed depends on COM
 
 //PDO = Php Data Object
 try {
