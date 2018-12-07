@@ -7,7 +7,7 @@
           contactData: {
             name: '',
             email: '',
-            title: '',
+            title: ''
           }
         },
         methods: {
@@ -15,8 +15,7 @@
             this.contactData = {
               name: '',
               email: '',
-              title: '',
-         
+              title: ''
             }
           },
           cancel: function() {
