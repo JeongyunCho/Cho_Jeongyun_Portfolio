@@ -49,7 +49,7 @@ const vm = new Vue({
          this.workVideo = data[0].works_videoUrl;
          this.workVideoDesc = data[0].works_videoDesc;
          for(i=0;i<data.length;i++){
-          this.workImageData.push(data[i].images_url);
+          this.workImageData.push("images/"+data[i].images_url);
          }
         // console.log(this.workImageData);
      },

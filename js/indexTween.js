@@ -3,8 +3,8 @@
   //tweenMax
 
 
-var conSec = document.querySelector('#content-section')
-var footer = document.querySelector('#footer')
+var conSec = document.querySelector('#content-section');
+var footer = document.querySelector('#footer');
 var ps = document.querySelectorAll(".porfworks");
 var p1s = document.querySelectorAll(".p1");
 var p2s = document.querySelectorAll(".p2");
