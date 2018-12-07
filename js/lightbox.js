@@ -7,8 +7,7 @@
      lightBox = document.querySelector("#lightbox"),
      nav = document.querySelector(".openBtn"),
      leftBtn = document.querySelector("#left"),
-     rightBtn = document.querySelector("#right"),
-      idx=0;
+     rightBtn = document.querySelector("#right");
 
 //functions
 //imageSwap changes image in lightbox
@@ -16,16 +15,20 @@
   lightBox.classList.add('open');
   nav.style.visibility='hidden';
   imageBox.src = e.target.src;
-  if(e.target.src.slice(-1)!=="m"){
-    idx= parseInt(e.target.src.slice(-1)-1);
+  if(e.target.src.substr(e.target.src.length-5,1)!=="m"){
+    idx= parseInt(e.target.src.substr(e.target.src.length-5,1)-1);
+  }else{
+    idx=0
   }
-//  console.log(clickImg[idx].firstChild.src);
+// console.log(idx);
+
  };
 
 
   
 //button function change Pic
   next=()=>{
+    // console.log(imageBox.src);
   idx++;
   if(idx==5)idx=0;
   imageBox.src = clickImg[idx].firstChild.src;

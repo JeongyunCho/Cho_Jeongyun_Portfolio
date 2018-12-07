@@ -13,11 +13,11 @@ const vm = new Vue({
 
     created : function() {
       var currentURL = window.location.pathname;
-      if(currentURL.includes("index")){
-      this.getData(null); 
-      };
+ 
       if(currentURL.includes("about")){
         this.getData(true);  
+      }else{
+        this.getData(null); 
       };
        
     },
@@ -50,13 +50,14 @@ const vm = new Vue({
 
      showImage(data) {
       if (window.matchMedia("(min-width: 1200px)").matches) {
-       this.work1Image = data[1].images_url;
-       this.work2Image = data[3].images_url;
-       this.work3Image = data[5].images_url;
+       this.work1Image = "images/"+data[1].images_url;
+       this.work2Image = "images/"+data[3].images_url;
+       this.work3Image = "images/"+data[5].images_url;
+       
     }else{
-       this.work1Image = data[0].images_url;
-       this.work2Image = data[2].images_url;
-       this.work3Image = data[4].images_url;
+       this.work1Image = "images/"+data[0].images_url;
+       this.work2Image = "images/"+data[2].images_url;
+       this.work3Image = "images/"+data[4].images_url;
       }
    }
 
