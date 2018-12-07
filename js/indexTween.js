@@ -48,7 +48,7 @@ var waypoint = new Waypoint({
  
   
        TweenMax.from(ball, 0.575, {
-        repeat: 4,
+        repeat: 2,
         yoyo: true,
         ease: Power1.easeIn,
         scale:2
