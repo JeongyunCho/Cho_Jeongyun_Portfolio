@@ -49,16 +49,10 @@ const vm = new Vue({
      },
 
      showImage(data) {
-      if (window.matchMedia("(min-width: 1200px)").matches) {
-       this.work1Image = "images/"+data[1].images_url;
-       this.work2Image = "images/"+data[3].images_url;
-       this.work3Image = "images/"+data[5].images_url;
-       
-    }else{
        this.work1Image = "images/"+data[0].images_url;
        this.work2Image = "images/"+data[2].images_url;
        this.work3Image = "images/"+data[4].images_url;
-      }
+       this.work4Image = "images/"+data[18].images_url;
    }
 
     }

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Dec 06, 2018 at 09:14 PM
--- Server version: 5.6.40
--- PHP Version: 5.6.30
+-- Host: 127.0.0.1:3306
+-- 생성 시간: 18-12-08 20:24
+-- 서버 버전: 5.7.21
+-- PHP 버전: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,22 +19,24 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `jeong129_portfolio`
+-- 데이터베이스: `jeong129_portfolio`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_about`
+-- 테이블 구조 `tbl_about`
 --
 
-CREATE TABLE `tbl_about` (
-  `about_id` tinyint(3) UNSIGNED NOT NULL,
-  `about_text` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `tbl_about`;
+CREATE TABLE IF NOT EXISTS `tbl_about` (
+  `about_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `about_text` text NOT NULL,
+  PRIMARY KEY (`about_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_about`
+-- 테이블의 덤프 데이터 `tbl_about`
 --
 
 INSERT INTO `tbl_about` (`about_id`, `about_text`) VALUES
@@ -45,16 +47,18 @@ INSERT INTO `tbl_about` (`about_id`, `about_text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_images`
+-- 테이블 구조 `tbl_images`
 --
 
-CREATE TABLE `tbl_images` (
-  `images_id` tinyint(3) UNSIGNED NOT NULL,
-  `images_url` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `tbl_images`;
+CREATE TABLE IF NOT EXISTS `tbl_images` (
+  `images_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `images_url` varchar(50) NOT NULL,
+  PRIMARY KEY (`images_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_images`
+-- 테이블의 덤프 데이터 `tbl_images`
 --
 
 INSERT INTO `tbl_images` (`images_id`, `images_url`) VALUES
@@ -75,22 +79,30 @@ INSERT INTO `tbl_images` (`images_id`, `images_url`) VALUES
 (15, 'work3_kimW-d2.jpg'),
 (16, 'work3_kimW-d3.jpg'),
 (17, 'work3_kimW-d4.png'),
-(18, 'work3_kimW-d5.png');
+(18, 'work3_kimW-d5.png'),
+(19, 'work4_demo-m.png'),
+(20, 'work4_demo-d.png'),
+(21, 'work4_demo-d2.png'),
+(22, 'work4_demo-d3.png'),
+(23, 'work4_demo-d4.png'),
+(24, 'work4_demo-d5.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_img_works`
+-- 테이블 구조 `tbl_img_works`
 --
 
-CREATE TABLE `tbl_img_works` (
-  `img_works_id` tinyint(3) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `tbl_img_works`;
+CREATE TABLE IF NOT EXISTS `tbl_img_works` (
+  `img_works_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT,
   `images_id` tinyint(4) NOT NULL,
-  `works_id` tinyint(4) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `works_id` tinyint(4) NOT NULL,
+  PRIMARY KEY (`img_works_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_img_works`
+-- 테이블의 덤프 데이터 `tbl_img_works`
 --
 
 INSERT INTO `tbl_img_works` (`img_works_id`, `images_id`, `works_id`) VALUES
@@ -111,87 +123,39 @@ INSERT INTO `tbl_img_works` (`img_works_id`, `images_id`, `works_id`) VALUES
 (15, 15, 3),
 (16, 16, 3),
 (17, 17, 3),
-(18, 18, 3);
+(18, 18, 3),
+(19, 19, 4),
+(20, 20, 4),
+(21, 21, 4),
+(22, 22, 4),
+(23, 23, 4),
+(24, 24, 4);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_works`
+-- 테이블 구조 `tbl_works`
 --
 
-CREATE TABLE `tbl_works` (
-  `works_id` tinyint(3) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `tbl_works`;
+CREATE TABLE IF NOT EXISTS `tbl_works` (
+  `works_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT,
   `works_title` varchar(25) NOT NULL,
   `works_desc` text NOT NULL,
   `works_videoUrl` varchar(100) NOT NULL,
-  `works_videoDesc` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `works_videoDesc` text NOT NULL,
+  PRIMARY KEY (`works_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_works`
+-- 테이블의 덤프 데이터 `tbl_works`
 --
 
 INSERT INTO `tbl_works` (`works_id`, `works_title`, `works_desc`, `works_videoUrl`, `works_videoDesc`) VALUES
 (1, 'Car Promo APP', 'Our main goal of this project is to create an interactive application using 3D, video, audio and still images. Design and develop an App with which user can view video, explore specs, etc for a car.\r\n\r\nI was the motion graphic designer, Project Manager and front-end developer for this project. I modified, textured and built a scene of car modelling in c4d, bring it to aftereffect give a final touch. Design wise, I decided the entire layout of the app and currently on the progress of coding the actual app.\r\n\r\n- Under Construction, due 2019', 'https://www.youtube.com/embed/F3x9N8LDiiU', 'For this video, I used c4d to build entire cuts and sync the music. I found it easier to develop scenes to match the initial concept I set at the beginning by using this method. These are the initial style frames that I made that gave me clear direction with the animation.'),
 (2, 'Infuser Bottle', 'Our main goal of this project is to create a unique design and functionality for a thermal bottle with detachable infuser pod.\r\n\r\nI was the motion graphic designer and Project Manager for this project. I created the entire brand, from the logo,label, to developing the elements of the brand, designing the product(bottle), do modeling in c4d and make a promo video for it.', 'https://www.youtube.com/embed/aFujUqRNDQw', 'For this video, I focused on showing all the elements of the product in one smooth camera movement. These are some of the rendered images of the bottle.'),
 (3, 'Kim Kyeongmi Hanbok', 'For this project, I rebranded a website for Hanbok Designer Kim Kyeong Mi. The original website was built with WordPress and the client wanted to keep it in WordPress. I visited the shop, took some photos to use for the website and rebuilt from logo to the entire website.', '', ''),
-(4, 'Demo Reel', 'A demo reel of my most recent video work including personal and professional projects from the past two years.', 'https://www.youtube.com/watch?v=WUgvvPRH7Oc', 'For this video, c4d is used to model and lighting then aftereffect to give a final touch including music. These are the style frames of the demo reel.');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `tbl_about`
---
-ALTER TABLE `tbl_about`
-  ADD PRIMARY KEY (`about_id`);
-
---
--- Indexes for table `tbl_images`
---
-ALTER TABLE `tbl_images`
-  ADD PRIMARY KEY (`images_id`);
-
---
--- Indexes for table `tbl_img_works`
---
-ALTER TABLE `tbl_img_works`
-  ADD PRIMARY KEY (`img_works_id`);
-
---
--- Indexes for table `tbl_works`
---
-ALTER TABLE `tbl_works`
-  ADD PRIMARY KEY (`works_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `tbl_about`
---
-ALTER TABLE `tbl_about`
-  MODIFY `about_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `tbl_images`
---
-ALTER TABLE `tbl_images`
-  MODIFY `images_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `tbl_img_works`
---
-ALTER TABLE `tbl_img_works`
-  MODIFY `img_works_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `tbl_works`
---
-ALTER TABLE `tbl_works`
-  MODIFY `works_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+(4, 'Demo Reel', 'A demo reel of my most recent video work including personal and school projects from the past two years. I built the entire project from the basic concept with style frames.', 'https://www.youtube.com/embed/cZKcU1_XwYM', 'For this video, c4d is used to model 3D and lighting then aftereffect to give a final touch including music. These are the style frames of the demo reel.');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
