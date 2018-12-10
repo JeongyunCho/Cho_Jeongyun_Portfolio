@@ -27,13 +27,14 @@ Work Page shows detail of the work I worked on it also shows video, url to githu
 ## Built With
 
 * [Foundation 6](https://foundation.zurb.com/sites.html) - The web framework used - Zurb Foundation 6 for sites
-* [Node.js](https://nodejs.org/en/)
-* [Git](https://git-scm.com/)
-* [Vue.js]
-* [PHP/MySQL]
-* [Gulp.js]
-* [SASS]
-
+* [Git](https://git-scm.com/) Used for versioning.
+* [Vue.js](https://vuejs.org/) to fetch database and put on html.
+* [PHP/MySQL] to build database of the site.
+* [Gulp.js](https://gulpjs.com/) Used sass, serve with Gulp
+* [SASS](https://sass-lang.com/) Sass to manipulate CSS.
+* [GreenSock](https://greensock.com/) - for animations of svg, text and image.
+* [npm](https://www.npmjs.com/) npm compiled and install packages.
+* [waypoints](http://imakewebthings.com/waypoints/) to trigger function on scroll to certain point.
 
 
 ## Authors
